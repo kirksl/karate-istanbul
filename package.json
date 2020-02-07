@@ -1,0 +1,28 @@
+{
+  "name": "karate-istanbul",
+  "version": "1.0.0",
+  "description": "Karate tests with Istanbul code coverage",
+  "scripts": {
+    "instrument": "nyc instrument --compact=false server ./.nyc_instrumented/server",
+    "test": "node ./test/test.js",
+    "test:calculator": "npm run test -- ./test/calculator.feature",
+    "test:advanced": "npm run test -- ./test/advanced.feature",
+    "report": "nyc report --reporter=lcov --report-dir ./.nyc_report",
+    "clean": "rd /q /s .nyc_instrumented .nyc_output .nyc_report target"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cli-table3": "^0.5.1",
+    "dotenv": "^8.2.0",
+    "execa": "^4.0.0",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nyc": "^15.0.0",
+    "mkdirp": "latest"
+  }
+}
