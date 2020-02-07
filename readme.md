@@ -4,7 +4,9 @@ The purpose of this project is to showcase how Karate tests which call an isolat
 
 ## Setup
 Install Node (tested with v12.13.1)
+
 Install Java (tested with Java SE Runtime Environment build 1.8.0_201-b09)
+
 Update **npm run clean** command in package.json if using Linux/Mac.  Currently setup for Windows.
 ```batch
 npm install
